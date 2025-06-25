@@ -1,0 +1,108 @@
+### Styling List Items in React Native
+
+#### Objective
+
+Improve the appearance of list items using styling and address **platform-specific behavior** (e.g., iOS missing border radius on `<Text>`).
+
+---
+
+### Step-by-Step Styling Breakdown
+
+#### 1. **Define List Item Style**
+
+Use `StyleSheet.create()` to define reusable styles:
+
+```js
+goalItem: {
+  margin: 8,
+  padding: 8,
+  backgroundColor: '#5e0acc',
+  borderRadius: 6,
+},
+```
+
+* `margin`: Outer spacing
+* `padding`: Inner spacing
+* `backgroundColor`: Custom purple shade
+* `borderRadius`: Rounded corners
+
+---
+
+#### 2. **Wrap `<Text>` in a `<View>`**
+
+**Why?** On iOS, border radius doesn’t work on `<Text>`, only on `<View>`.
+
+```jsx
+<View style={styles.goalItem}>
+  <Text>{item.text}</Text>
+</View>
+```
+
+IMPORTANT NOTE: Turns out border radius is working for iOS as well. The course might
+be a little outdated.
+
+---
+
+#### 3. **Text Color Issue**
+
+Text color defined on `<View>` will **not cascade** to `<Text>`.
+
+**React Native does not support CSS-style inheritance.**
+
+#### Solution:
+
+* Remove `color` from `goalItem`
+* Create separate style for text:
+
+```js
+goalText: {
+  color: 'white',
+}
+```
+
+Apply it directly to `<Text>`:
+
+```jsx
+<View style={styles.goalItem}>
+  <Text style={styles.goalText}>{item.text}</Text>
+</View>
+```
+
+---
+
+### Summary: Key Learnings
+
+| Topic                 | Details                                                                                                           |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Style Definition      | Use `StyleSheet.create()` for clean, reusable styles                                                              |
+| Platform Difference   | iOS `<Text>` doesn’t support `borderRadius` → wrap in `<View>`                                                    |
+| Style Inheritance     | ❌ No cascading/inheritance → must style each element explicitly                                                   |
+| View vs. Text Styling | Layout styles (e.g., `margin`, `padding`, `backgroundColor`) on `<View>`; text styles (e.g., `color`) on `<Text>` |
+
+---
+
+### Final Code Example
+
+```jsx
+<View style={styles.goalItem}>
+  <Text style={styles.goalText}>{item.text}</Text>
+</View>
+```
+
+```js
+const styles = StyleSheet.create({
+  goalItem: {
+    margin: 8,
+    padding: 8,
+    backgroundColor: '#5e0acc',
+    borderRadius: 6,
+  },
+  goalText: {
+    color: 'white',
+  },
+});
+```
+
+---
+
+This structure ensures your list items have **consistent styling** across Android and iOS, with **explicit control** over every visual aspect.

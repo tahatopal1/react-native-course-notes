@@ -1,0 +1,40 @@
+### How React Native Works Under the Hood
+
+#### Component Structure and Syntax
+
+* You write **React components** using familiar syntax (functions, arrow functions, or classes) with **JSX**.
+* React Native introduces special **components** like `<View>` and `<Text>`, which replace HTML elements used in web development.
+* JSX elements are **compiled to native UI components**, but **JavaScript logic is not compiled**.
+
+#### Platform-Specific Component Mapping
+
+React Native provides a mapping layer between **React components** and **native platform widgets**:
+
+| Purpose        | Web (React DOM)   | Android (Java/Kotlin) | iOS (Swift/Obj-C) | React Native Component |
+| -------------- | ----------------- | --------------------- | ----------------- | ---------------------- |
+| Text Input     | `<input>`         | `EditText`            | `UITextField`     | `<TextInput>`          |
+| Container View | `<div>`           | `ViewGroup`           | `UIView`          | `<View>`               |
+| Text Display   | `<p>` or `<span>` | `TextView`            | `UILabel`         | `<Text>`               |
+
+These React Native components are **compiled to their native equivalents** depending on the platform.
+
+#### Handling of JavaScript Logic
+
+* JavaScript logic (functions, conditions, state management) is **not compiled**.
+* Instead, React Native **runs your JavaScript on a separate JavaScript thread** within the app.
+* This JS thread is hosted inside the native application via a **JavaScript engine** (e.g., Hermes or JSC).
+
+#### Communication with Native Platform
+
+* React Native includes a **bridge** that enables communication between:
+
+  * JavaScript code (running on JS thread)
+  * Native code (platform-specific APIs and UI elements)
+* This bridge allows the JS thread to control native UI components and access native device capabilities.
+
+#### Summary
+
+* **JSX UI code** is compiled to native platform widgets.
+* **JavaScript logic** runs in a JS engine embedded in the app.
+* **React Native bridge** connects the JS thread with native modules, enabling app logic to interact with native APIs.
+* This model allows developers to build cross-platform apps using React and JavaScript while achieving native performance and access.

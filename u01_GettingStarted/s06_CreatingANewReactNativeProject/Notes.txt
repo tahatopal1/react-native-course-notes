@@ -1,0 +1,66 @@
+### Setting Up a New React Native Project with Expo
+
+#### Step 1: Install Node.js
+
+* Visit [nodejs.org](https://nodejs.org) and download the **latest LTS version**.
+* Node.js is required to:
+
+  * Run the JavaScript environment used under the hood by Expo
+  * Use the `npx` command to generate projects
+
+---
+
+### Step 2: Create a New Expo Project
+
+#### Recommended Command:
+
+```bash
+npx create-expo-app rnCourse --template blank
+```
+
+* **`npx create-expo-app`**: Initializes a new Expo-based React Native project.
+* **`--template blank`**: Ensures the project starts with a minimal setup (avoids TypeScript and extra boilerplate).
+* **`rnCourse`**: Example project name (customizable).
+
+#### Notes:
+
+* Run the command in a terminal window inside the directory where you want the project to be created.
+* A new folder named after the project (e.g., `rnCourse`) will be created.
+* Inside, all necessary files and dependencies will be initialized.
+* This process might take a few minutes.
+
+---
+
+### Additional Resource
+
+* Visit [expo.dev](https://expo.dev) – the official Expo website to:
+
+  * Learn about Expo features
+  * Understand CLI commands
+  * Explore additional tools and services Expo provides
+
+---
+
+### After Installation
+
+Once setup is complete, Expo will show suggested next steps:
+
+* Navigate into the project directory:
+
+  ```bash
+  cd rnCourse
+  ```
+* Run the app using:
+
+  ```bash
+  npx expo start
+  ```
+
+> However, these commands won't be executed immediately in the course. Instead, the instructor will guide through project structure and files first.
+
+---
+
+### Platform Focus
+
+* **Only Android and iOS** platforms will be covered in this course.
+* **Web platform support via Expo** will be ignored, as the focus is strictly on mobile development.

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u01_GettingStarted/s06_CreatingANewReactNativeProject/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s16_StylingReactNativeApps/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s18_ExploringLayoutsAndFlexbox/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s21_FlexboxDeepDive/DeepDive" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s22_ImprovingTheLayout/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s23_HandlingEvents/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s25_DeviceStylingDifferences/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s26_ScrollView/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s27_OptimizingListsWithFlatList/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s28_SplittingComponents/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s29_HandlingTapsWithPressableComponent/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s33_AndroidRippleEffectAndIOSAlternative/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s34_AddingModalScreen/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u02_ReactNativeBasics/s37_WorkingWithImagesAndColors/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u04_BuildingAMiniGame/s48_SettingUpScreenComponents/miniGame" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u04_BuildingAMiniGame/s49_CreatingCustomButtons/miniGame" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u04_BuildingAMiniGame/s50_StylingForIOSAndAndroid/miniGame" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u04_BuildingAMiniGame/s51_StylingNumberInput/miniGame" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u04_BuildingAMiniGame/s52_ConfiguringTextInputField/miniGame" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u04_BuildingAMiniGame/s53_AddingVisualFeedbackToButtons/miniGame" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/u06_ReactNativeNavigation/s93_GettingStartedWithMealsApp/mealsApp" vcs="Git" />
+  </component>
+</project>

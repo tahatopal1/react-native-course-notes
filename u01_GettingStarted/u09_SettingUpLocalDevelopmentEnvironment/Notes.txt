@@ -1,0 +1,80 @@
+### Setting Up Device Preview and Emulators in React Native (with Expo)
+
+#### Real-Time Preview with Expo Go App
+
+* You can **preview your app live** on a real mobile device using the **Expo Go** app.
+* Expo Go is available for **both Android and iOS** via their respective app stores.
+* Run the following command in your terminal to start the development server:
+
+  ```bash
+  npm start
+  ```
+* A QR code is generated. Scan it with:
+
+  * **Android**: Built-in QR scanner in Expo Go.
+  * **iOS**: Native **Camera app**, then open the link in **Expo Go**.
+
+---
+
+### Emulators & Simulators for Local Testing
+
+#### 🟢 Android Emulator (Cross-platform)
+
+1. Download **Android Studio** from: [developer.android.com/studio](https://developer.android.com/studio)
+2. Open Android Studio → **More Actions** → **Virtual Device Manager**
+3. Click **Create Device**, choose a template (e.g., Pixel 5), and pick an API level (e.g., API 32).
+4. **Important**: Choose a template **with the Google Play Store icon** so it can install Expo Go.
+5. Launch the emulator.
+6. In the terminal running `npm start`, press:
+
+   ```bash
+   A
+   ```
+
+   * This installs Expo Go and opens the app automatically in the emulator.
+
+---
+
+#### 🍎 iOS Simulator (Mac Only)
+
+1. **macOS only**: Install **Xcode** via the Mac App Store.
+2. Open **Xcode → Preferences → Locations** → set **Command Line Tools**.
+3. Open iOS Simulator from:
+
+   ```
+   Applications → Xcode → Show Package Contents → Contents → Developer → Applications → Simulator
+   ```
+4. Run the simulator (e.g., iPhone 13).
+5. In the terminal running `npm start`, press:
+
+   ```bash
+   I
+   ```
+
+   * This installs and launches Expo Go on the iOS simulator.
+
+> ⚠ iOS simulators **are not supported on Windows or Linux** due to Apple restrictions. However, building real iOS apps on those platforms is possible using cloud-based build tools.
+
+---
+
+### Development Workflow Tips
+
+* Keep the Expo development server (`npm start`) **running at all times** during development.
+* When the server is running, your code updates will be **hot reloaded** into the app automatically on connected devices/simulators.
+* Press:
+
+  * `R` in the terminal to **manually reload** apps.
+  * `Ctrl + C` to stop the server.
+* You can serve **Android and iOS previews simultaneously** on their respective simulators.
+
+---
+
+### Summary Environment
+
+| Preview Method       | Platform    | Requirements                      |
+| -------------------- | ----------- | --------------------------------- |
+| **Expo Go (Device)** | Android/iOS | Mobile device + Expo Go app       |
+| **Android Emulator** | All OSes    | Android Studio + Play Store image |
+| **iOS Simulator**    | macOS only  | Xcode + Simulator tool            |
+
+> This setup forms the **React Native development environment** for the course—enabling rapid testing and debugging on real devices and virtual emulators.

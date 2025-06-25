@@ -1,0 +1,101 @@
+### React Native Fundamentals and Project Structure
+
+#### Development Setup Recap
+
+* If you didn’t create the project in the earlier steps, download the starter files and run:
+
+  ```bash
+  npm install
+  npm start
+  ```
+* Launch Android and iOS emulators with:
+
+  * `a` for Android
+  * `i` for iOS
+
+---
+
+### Core Concepts
+
+#### Functional Components Only
+
+* The course uses **functional components** and **React Hooks** exclusively.
+* **No class-based components** are used.
+
+---
+
+### Built-in Core Components
+
+React Native provides **platform-agnostic components** instead of HTML elements:
+
+| Web (HTML) | React Native Component | Purpose                   |
+| ---------- | ---------------------- | ------------------------- |
+| `<div>`    | `<View>`               | Container layout          |
+| `<p>`      | `<Text>`               | Displaying text           |
+| `<input>`  | `<TextInput>`          | User input                |
+| `<img>`    | `<Image>`              | Displaying images         |
+| `<button>` | `<Button>`             | Built-in clickable button |
+
+* Native devices **don’t have HTML or DOM**, so HTML tags like `<div>`, `<h1>`, etc. **won’t work**.
+* React Native components are **translated into native UI widgets** for Android and iOS.
+
+---
+
+### Component Composition
+
+* Complex UIs are built by **composing core components** (e.g., nesting `<View>`s and `<Text>`s).
+* This pattern is **similar to React on the web**, but using a **smaller set of available components**.
+
+---
+
+### Styling in React Native
+
+#### Key Differences from Web CSS:
+
+* **No CSS files**: Styling is done in JavaScript, using objects and the `StyleSheet.create()` utility.
+* React Native supports a **subset of CSS-like properties**.
+
+#### Example:
+
+```js
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+    backgroundColor: '#f4f4f4',
+  },
+  text: {
+    fontSize: 18,
+    color: '#333',
+  }
+});
+```
+
+* Applied using the `style` prop:
+
+```jsx
+<View style={styles.container}>
+  <Text style={styles.text}>Hello World</Text>
+</View>
+```
+
+---
+
+### The Root Component: `App`
+
+* **`App.js`** exports the **root component** for the entire React Native app.
+* Expo automatically picks this component for rendering.
+* All other screens/components will be children or descendants of this `App` component.
+
+---
+
+### Summary
+
+| Concept               | Notes                                                              |
+| --------------------- | ------------------------------------------------------------------ |
+| Components used       | Functional only (React Hooks)                                      |
+| No HTML/DOM           | Uses platform-independent components like `<View>`, `<Text>`, etc. |
+| Styling               | Done in JS via `StyleSheet`, not CSS                               |
+| Component composition | Build UI by nesting core components                                |
+| Root component        | `App.js` exports the root; all UI must derive from it              |
+
+> React Native builds powerful UIs using a lean set of core components, functional composition, and JavaScript-based styling—without relying on the web’s DOM or CSS.

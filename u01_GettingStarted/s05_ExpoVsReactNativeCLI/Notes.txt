@@ -1,0 +1,60 @@
+### Getting Started with React Native: Project Setup and Tooling
+
+#### Official Website
+
+* Visit [reactnative.dev](https://reactnative.dev) – the official site for:
+
+  * Documentation
+  * Development setup guides
+  * Learning resources
+
+---
+
+### Two Main Development Approaches
+
+#### 1. **Expo CLI (Recommended)**
+
+* **Third-party toolchain** for building React Native apps
+* Provides a **managed workflow** with pre-configured tools and libraries
+* Ideal for beginners and faster prototyping
+* **Simplifies**:
+
+  * Project creation
+  * Running apps on devices/emulators
+  * Accessing native device features (e.g., camera)
+* **Free to use**, no registration required (premium services are optional)
+* **Key Benefit**: You can **eject** from Expo later to switch to the React Native CLI workflow if needed
+
+#### 2. **React Native CLI**
+
+* The **official** CLI tool by the React Native team
+* Provides a **barebones setup**, requiring more manual configuration
+* Less abstraction, offering better control over the build system
+* Better suited for:
+
+  * Projects needing custom native code in Java, Kotlin, Swift, or Objective-C
+  * Advanced integrations with native modules
+
+---
+
+### Comparison: Expo CLI vs. React Native CLI
+
+| Feature                 | Expo CLI                       | React Native CLI                       |
+| ----------------------- | ------------------------------ | -------------------------------------- |
+| Setup Difficulty        | Easy                           | Moderate to Hard                       |
+| Device API Access       | Simplified with Expo APIs      | Manual linking/configuration           |
+| Native Code Integration | Limited (eject to gain access) | Full control                           |
+| Build & Deployment      | Expo build tools or EAS        | Manual or custom setups                |
+| Best Use Case           | Beginners, fast prototyping    | Advanced customization, native modules |
+
+---
+
+### Course Tooling Decision
+
+* **Expo CLI** will be used throughout the course because:
+
+  * It’s easy to get started
+  * Reduces boilerplate and setup friction
+  * Still allows switching to native CLI later if required
+
+This makes it an ideal starting point for learning and building cross-platform React Native apps efficiently.

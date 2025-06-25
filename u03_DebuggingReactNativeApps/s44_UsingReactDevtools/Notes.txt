@@ -1,0 +1,85 @@
+Using React Developer Tools with React Native
+
+Purpose
+
+To inspect your component tree, view and modify state and props, and debug your app more deeply — using the standard React DevTools, not limited to console logging or native-specific tools.
+
+⸻
+
+Step 1: Install React Developer Tools
+
+Install the standalone version globally:
+
+# macOS/Linux
+sudo npm install -g react-devtools
+
+# Windows (no sudo needed)
+npm install -g react-devtools
+
+This installs a CLI tool to launch a desktop version of React DevTools.
+
+⸻
+
+Step 2: Run React DevTools
+
+In a separate terminal window:
+
+react-devtools
+
+This will open a standalone window similar to the browser extension version.
+
+⸻
+
+Step 3: Enable Remote Debugging
+
+In your running React Native app:
+	1.	Open the Developer Menu:
+	•	Cmd + D (iOS)
+	•	Ctrl + M (Android)
+	•	or press m in the npm start terminal
+	2.	Select “Debug Remote JS”
+
+React DevTools should now connect to your app.
+
+⸻
+
+Features of React DevTools in React Native
+	•	Component Tree:
+	•	View the hierarchy of components, including:
+	•	Custom components (e.g., GoalInput)
+	•	Native core components (e.g., View, Text, Button)
+	•	Inspect State and Props:
+	•	Click any component to:
+	•	See current state values
+	•	View props passed to it
+	•	Update them live to simulate and test behaviors
+	•	Live Editing:
+	•	Modify state or props directly from DevTools
+	•	Updates are immediately reflected in the app
+
+⸻
+
+Known Limitations
+	•	Color Glitch Bug: Background color (defined in app.json) may be lost when Remote Debugging is enabled.
+	•	Performance Impact: Running in Remote Debug mode may slow down the app.
+
+⸻
+
+Best Practices
+
+Task	Recommendation
+Debug complex state/props	Use React DevTools
+Monitor API/network calls	Use Chrome DevTools via Remote Debug JS
+Daily development	Avoid always-on Remote Debugging
+
+
+⸻
+
+Summary
+
+Tool	Purpose
+react-devtools	Standalone React DevTools app
+Remote JS Debugging	Enables DevTools connection to your app
+Component Inspector	View/modify component tree, props, and state
+
+Using React DevTools is a powerful way to analyze and debug your app’s logic and component flow during development — especially helpful for larger or more dynamic React Native apps.

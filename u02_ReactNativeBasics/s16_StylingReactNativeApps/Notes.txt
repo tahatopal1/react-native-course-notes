@@ -1,0 +1,91 @@
+### Styling in React Native
+
+#### Key Principles
+
+* **No CSS files or CSS syntax** – all styles are written in **JavaScript**.
+* Styling is applied via the **`style` prop** using:
+
+  * Inline style objects
+  * Shared styles defined with `StyleSheet.create({})`
+
+---
+
+### 📌 Inline Styling Example
+
+```jsx
+<Text style={{ margin: 16, padding: 16, borderWidth: 2, borderColor: 'red' }}>
+  Hello World
+</Text>
+```
+
+* ✅ Works, but:
+
+  * ❌ Not reusable
+  * ❌ Clutters JSX
+  * ❌ Hard to maintain when repeated
+
+---
+
+### 📌 StyleSheet Object (Recommended)
+
+```js
+import { StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  dummyText: {
+    margin: 16,
+    padding: 16,
+    borderWidth: 2,
+    borderColor: 'blue',
+  },
+});
+```
+
+```jsx
+<Text style={styles.dummyText}>Hello World</Text>
+<Text style={styles.dummyText}>Another piece of text</Text>
+```
+
+#### Why Use `StyleSheet.create()`?
+
+* Auto-completion in IDEs
+* Encourages **style reuse**
+* Separates concerns (JSX vs. styles)
+* May support future React Native performance optimizations
+
+---
+
+### Supported Style Properties
+
+* Similar to CSS but not identical (in naming or availability)
+* Examples:
+
+  * `margin`, `padding`, `borderWidth`, `borderColor`
+  * No shorthand properties like `border`
+  * Units are **unitless numbers**, interpreted as **density-independent pixels**
+
+---
+
+### Differences from Web CSS
+
+| Web CSS                 | React Native Equivalent                   |
+| ----------------------- | ----------------------------------------- |
+| `border: 2px solid red` | `borderWidth: 2`, `borderColor: 'red'`    |
+| `margin: 16px`          | `margin: 16`                              |
+| Units (px, %, em, etc.) | Only unitless numbers (interpreted in dp) |
+| Shorthand support       | ❌ Use explicit properties only            |
+
+---
+
+### Summary
+
+| Styling Method        | Pros                          | Cons                        |
+| --------------------- | ----------------------------- | --------------------------- |
+| **Inline Object**     | Quick, localized              | Not reusable, cluttered JSX |
+| **StyleSheet.create** | Clean, reusable, autocomplete | Slightly more setup         |
+
+---
+
+### Next Step
+
+* Now that styling individual elements is understood, the next focus will be on **layout** and **positioning multiple components**, which requires deeper understanding of **Flexbox in React Native**.

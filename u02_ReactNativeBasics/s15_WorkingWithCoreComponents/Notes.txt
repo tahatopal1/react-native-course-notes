@@ -1,0 +1,87 @@
+### Deeper Dive into React Native Core Components
+
+#### JSX Rules in React Native
+
+* **Text nodes must be wrapped in `<Text>` components.**
+
+  ```jsx
+  // ❌ Invalid
+  <View>Hello World</View>
+
+  // ✅ Valid
+  <View>
+    <Text>Hello World</Text>
+  </View>
+  ```
+
+* **Why?**
+
+  * Native platforms are **stricter** than web browsers.
+  * `<View>` (like `<div>`) is a layout container, not a text renderer.
+  * Only `<Text>` components can display text.
+
+---
+
+### Core Component Roles
+
+| Component      | Purpose                                    |
+| -------------- | ------------------------------------------ |
+| `<Text>`       | Renders text content                       |
+| `<View>`       | Acts as a layout container                 |
+| `<Button>`     | Renders platform-styled clickable buttons  |
+| `<TextInput>`  | Accepts user input                         |
+| `<Image>`      | Displays images                            |
+| `<ScrollView>` | Enables scrolling through child components |
+
+* You can **nest components**:
+
+  ```jsx
+  <View>
+    <Text>First Line</Text>
+    <View>
+      <Text>Nested Line</Text>
+    </View>
+    <Button title="Click Me" />
+  </View>
+  ```
+
+---
+
+### Key Differences from Web Development
+
+| Web                       | React Native                              |
+| ------------------------- | ----------------------------------------- |
+| No import needed for tags | Must **import** all components used       |
+| `<button>Text</button>`   | `<Button title="Text" />` (self-closing)  |
+| CSS styling               | JavaScript-based styling via `StyleSheet` |
+| Tags like `<div>`, `<h1>` | Use `<View>`, `<Text>` instead            |
+
+---
+
+### Adding a Button Example
+
+```js
+import { View, Text, Button } from 'react-native';
+
+<View>
+  <Text>Hello World</Text>
+  <Button title="Press Me" />
+</View>
+```
+
+* The button adapts to the **native platform’s style**.
+
+  * iOS: Rounded, flat button
+  * Android: Elevated button with ripple effect
+* **Interactivity (e.g. `onPress`)** will be added later.
+
+---
+
+### Summary
+
+* Always wrap text inside `<Text>` components.
+* Use `<View>` for layout and structure.
+* Use only **imported** core components from `react-native`.
+* Compose UIs by **nesting and combining core components**.
+* Buttons are **self-closing**, configured via props.
+* UI styling is essential and will be handled using JavaScript in upcoming steps.

@@ -1,0 +1,73 @@
+### Previewing a React Native App with Expo
+
+#### Goal
+
+Enable **real-time preview** of the app during development—similar to how React apps are previewed in the browser.
+
+---
+
+### Using the Expo Go App for Live Preview
+
+#### Step 1: Install Expo Go on Your Mobile Device
+
+* Available for both **Android** and **iOS**
+* Search for and install **"Expo Go"** from your app store
+
+---
+
+### Step 2: Start the Expo Development Server
+
+* Open a terminal in your project directory (e.g., inside VS Code)
+* Run:
+
+  ```bash
+  npm start
+  ```
+
+  or
+
+  ```bash
+  npx expo start
+  ```
+* This launches the **Expo Development Server**, which:
+
+  * Watches your code
+  * Builds JavaScript bundles
+  * Displays a **QR code** in the terminal and a browser tab
+
+---
+
+### Step 3: Connect Your Device
+
+#### On Android:
+
+* Open the **Expo Go app**
+* Tap the **Scan QR Code** option
+* Scan the QR from the terminal or browser
+* Your app will load immediately
+
+#### On iPhone (iOS):
+
+* Use the **native Camera app** to scan the QR code
+* Tap the notification that appears
+* Grant permissions if prompted
+* App opens in Expo Go automatically
+
+---
+
+### Live Reloading in Action
+
+* Any changes saved in your code (e.g., updating text to `"Hello, World"`) are **instantly reflected** in the app on your device.
+* No need for manual rebuilding or reinstallation.
+
+---
+
+### Summary
+
+| Tool            | Purpose                                 |
+| --------------- | --------------------------------------- |
+| **Expo Go App** | View the app on real device             |
+| **Expo CLI**    | Start local development server          |
+| **QR Code**     | Bridge between local machine and device |
+
+> This seamless workflow is a key benefit of using Expo—allowing fast development, testing, and debugging of React Native apps directly on physical devices without emulator setup.

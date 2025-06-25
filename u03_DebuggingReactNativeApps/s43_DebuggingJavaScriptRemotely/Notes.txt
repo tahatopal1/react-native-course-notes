@@ -1,0 +1,72 @@
+Developer Tools in React Native (with Expo)
+
+Why Use Developer Tools?
+	•	Go beyond console.log for deeper debugging
+	•	View network requests, console logs, and errors
+	•	Access shortcuts for debugging and refreshing the app
+
+⸻
+
+Useful Shortcuts in the Terminal (npm start)
+
+Key	Action
+a	Open app in Android emulator
+i	Open app in iOS simulator (macOS only)
+r	Force reload of the app
+m	Open developer menu on emulator/device
+?	Show help and full shortcut list
+
+To activate, click into the terminal window where npm start is running and press the shortcut key.
+
+⸻
+
+Developer Menu
+	•	Accessed via:
+	•	Press m in terminal
+	•	Cmd + D on iOS simulator
+	•	Cmd/Ctrl + M on Android emulator
+
+Menu Options:
+	•	Reload app
+	•	Go to Home screen
+	•	Debug Remote JS
+	•	Toggle Performance Monitor
+	•	Enable Live Reload / Hot Reload
+
+⸻
+
+Remote Debugging in Chrome
+	1.	From the Developer Menu, select “Debug Remote JS”
+	2.	A Chrome tab will open with a debugger
+	3.	Open Chrome DevTools (Cmd+Option+I or F12)
+	4.	You can now:
+	•	See console logs
+	•	Monitor network requests (e.g., API calls)
+	•	Use the debugger for breakpoints and inspection
+
+Example:
+
+console.log("GoalInput");
+
+	•	Will appear in the Console tab of Chrome DevTools.
+
+If it doesn’t appear immediately, try a manual reload or restart the app.
+
+⸻
+
+Important Notes
+	•	Remote debugging runs JS in Chrome’s V8 engine, not on the actual device.
+	•	For device-accurate performance, disable remote debugging when not needed.
+	•	To stop debugging: select “Stop Remote Debugging” in the Developer Menu.
+
+⸻
+
+Summary
+
+Feature	Purpose
+m key / Cmd+D / Ctrl+M	Opens Developer Menu
+Remote JS Debugging	Inspect logs, network, and JS execution
+Chrome DevTools	Standard browser tools now linked to your app
+When to use	Optional, but powerful for advanced debugging
+
+These tools enhance your visibility into how your React Native app behaves, especially when diagnosing API interactions and logic flow.

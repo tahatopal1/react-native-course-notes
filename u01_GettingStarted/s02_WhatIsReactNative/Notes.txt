@@ -1,0 +1,30 @@
+React Native – Key Concepts and Overview
+
+What is React Native?
+	•	React Native is a framework for building real native mobile apps using React.js.
+	•	It allows development for both iOS and Android platforms.
+	•	The final apps can be published to app stores and used like any regular native app.
+
+Relationship Between React.js and React Native
+	•	React.js is a JavaScript library for building user interfaces, mainly used in web development.
+	•	React itself is platform-agnostic; it doesn’t handle any platform-specific rendering by default.
+	•	React DOM is the library that enables React to interact with the web (browser).
+
+React Native vs React DOM
+	•	React DOM renders to the web browser.
+	•	React Native renders to native mobile UI components on iOS and Android.
+	•	Both serve as rendering layers on top of the React core library.
+
+How React Native Works
+	•	Provides a set of built-in components (e.g., <View>, <Text>, etc.) for use in JSX.
+	•	These components get compiled into native UI elements.
+	•	Also provides access to native platform APIs (e.g., camera access).
+	•	Compilation and bridging with native modules are handled automatically by React Native.
+
+Development Requirements
+	•	You write apps using React.js concepts (components, JSX, state management).
+	•	Additionally, you use React Native-specific components and APIs to build for mobile platforms.
+
+Summary
+
+React Native enables mobile app development using familiar React.js syntax, but targets mobile platforms (iOS & Android) instead of the web, providing the necessary tools and bridges to work with native features.
