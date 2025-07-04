@@ -1,0 +1,2 @@
+There's an error happens because of animation library. Import this to fix it:
+npm install react-native-reanimated@3.17.4

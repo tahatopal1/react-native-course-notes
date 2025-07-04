@@ -1,0 +1,44 @@
+### Navigators in React Navigation
+
+#### Native Stack vs. Stack
+
+* **`createNativeStackNavigator`**
+
+  * Renders transitions with **native platform components**.
+  * Yields smoother, more performant animations.
+  * Preferred for most use-cases.
+* **`createStackNavigator`**
+
+  * Re-implements stack behavior with JavaScript.
+  * Useful fallback if native stack causes issues or lacks a required feature.
+
+---
+
+### Accessing the Navigation Object
+
+| Situation                                     | Recommended Approach                                                                                                                                                                             |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Component is registered as a screen**       | Use the injected `navigation` **prop** directly (`navigation.navigate('Route')`).                                                                                                                |
+| **Nested / child component needs navigation** | Two options:<br>1. **Prop drilling** – pass the `navigation` prop down.<br>2. **`useNavigation` hook** – import from `@react-navigation/native` to access the same object without prop drilling. |
+
+```jsx
+import { useNavigation } from '@react-navigation/native';
+
+function CategoryTile({ id }) {
+  const navigation = useNavigation();
+  return (
+    <Pressable onPress={() => navigation.navigate('MealsOverview', { categoryId: id })}>
+      …
+    </Pressable>
+  );
+}
+```
+
+*`useNavigation` may be called in **any functional component**, not just screens.*
+
+---
+
+### Key Points
+
+* Native stack delivers platform-level animations; fallback to the JS stack only if necessary.
+* The **navigation prop** reaches screen components automatically; use `useNavigation` for deeper-nested components to avoid prop drilling.
